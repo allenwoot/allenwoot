@@ -34,7 +34,7 @@ namespace :deploy do
   desc "copy assets out of current directory"
   task :copy_assets do
     on roles(:all) do
-      execute "rm -rf ~/allenwoot/public/assets && mkdir -p ~/allenwoot/public/assets && cp ~/allenwoot/current/public/assets/* ~/allenwoot/public/assets"
+      execute "rm -rf ~/allenwoot/public/assets && mkdir -p ~/allenwoot/public/assets && cp ~/allenwoot/current/public/assets/* ~/allenwoot/public/assets && cp ~/allenwoot/current/public/favicon.ico ~/allenwoot/public"
     end
   end
 end
