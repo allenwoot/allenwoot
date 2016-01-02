@@ -30,6 +30,11 @@ gem 'puma'
 # Postgresql
 gem 'pg', '0.17.0'
 
+
+# For js runtime
+gem 'execjs'
+gem 'therubyracer'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
