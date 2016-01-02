@@ -26,22 +26,16 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :puma_preload_app, false
 
-#  # Clear existing task so we can replace it rather than "add" to it.
-#  Rake::Task["deploy:compile_assets"].clear 
-#
-#  desc "Precompile assets locally and then rsync to web servers" 
-#  task :compile_assets do 
-#    on roles(:web) do 
-#      rsync_host = host.to_s 
-# 
-#      run_locally do 
-#        with rails_env: :production do ## Set your env accordingly.
-#          execute :bundle, "exec rake assets:precompile" 
-#        end 
-#        execute "rsync -av --delete ./public/assets/ #{fetch(:user)}@#{rsync_host}:#{shared_path}/public/assets/" 
-#        execute "rm -rf public/assets" 
-#        # execute "rm -rf tmp/cache/assets" # in case you are not seeing changes 
-#      end 
-#    end 
-#  end
-#
+# There is an issue where nginx fails to read the assets. It tries to read from
+# allenwoot/public/assets, when they are located at allenwoot/current/public/assets.
+# I must be missing something and I'm sure there is a good fix, but this workaround
+# just copies all the compiled assets to the target directory post deploy.
+namespace :deploy do
+  desc "copy assets out of current directory"
+  task :copy_assets do
+    on roles(:all) do
+      execute "rm -rf ~/allenwoot/public/assets && mkdir -p ~/allenwoot/public/assets && cp ~/allenwoot/current/public/assets/* ~/allenwoot/public/assets"
+    end
+  end
+end
+after "deploy:finished", "deploy:copy_assets"
