@@ -1,0 +1,9 @@
+<h2>Ruby hash to JSON</h2>
+<%= form_tag({:controller=>"application", :action=>"ruby_hash_to_json"}, method: :get) do %>
+  <%= text_area_tag 'text_area_value', @magic, rows: 20, cols: 200, placeholder: "Enter your search query here"%>
+  <%= submit_tag 'Ruby hashify', name: nil %>
+<% end %>
+
+<p>
+  <%= @error_text %>
+</p>

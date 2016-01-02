@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get 'det' => 'application#det'
   get 'proxy' => 'application#proxy'
+  get 'json-to-ruby-hash' => 'application#json_to_ruby_hash'
+  get 'ruby-hash-to-json' => 'application#ruby_hash_to_json'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
