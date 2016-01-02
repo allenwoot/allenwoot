@@ -28,7 +28,7 @@ gem 'figaro'
 gem 'puma'
 
 # Postgresql
-gem 'pg', '0.18.4'
+gem 'pg', '0.17.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
