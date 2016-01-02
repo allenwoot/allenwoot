@@ -25,3 +25,23 @@ set :puma_workers, 0
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :puma_preload_app, false
+
+#  # Clear existing task so we can replace it rather than "add" to it.
+#  Rake::Task["deploy:compile_assets"].clear 
+#
+#  desc "Precompile assets locally and then rsync to web servers" 
+#  task :compile_assets do 
+#    on roles(:web) do 
+#      rsync_host = host.to_s 
+# 
+#      run_locally do 
+#        with rails_env: :production do ## Set your env accordingly.
+#          execute :bundle, "exec rake assets:precompile" 
+#        end 
+#        execute "rsync -av --delete ./public/assets/ #{fetch(:user)}@#{rsync_host}:#{shared_path}/public/assets/" 
+#        execute "rm -rf public/assets" 
+#        # execute "rm -rf tmp/cache/assets" # in case you are not seeing changes 
+#      end 
+#    end 
+#  end
+#

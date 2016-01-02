@@ -54,7 +54,7 @@ group :development, :test do
 
   # capistrano is for deploys
   gem 'capistrano'
-  gem 'capistrano3-puma'
+  gem 'capistrano-puma'
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rvm'
