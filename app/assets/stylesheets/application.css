@@ -16,3 +16,20 @@
 img {
   height: 500px;
 }
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.nav-name {
+  font-size: 45px;
+}
+
+.subheader {
+  font-size: 25px;
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
