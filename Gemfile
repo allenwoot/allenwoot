@@ -27,10 +27,6 @@ gem 'figaro'
 # puma is the application server
 gem 'puma'
 
-# Postgresql
-gem 'pg', '0.17.0'
-
-
 # For js runtime
 gem 'execjs'
 gem 'therubyracer'
@@ -47,6 +43,7 @@ gem 'therubyracer'
 gem 'sprockets', '3.5.2'
 
 group :development, :test do
+  gem 'sqlite3',     '1.3.9'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -64,4 +61,6 @@ end
 
 group :production do
   gem 'rails_12factor', '0.0.2'
+  # Postgresql
+  gem 'pg', '0.17.0'
 end
