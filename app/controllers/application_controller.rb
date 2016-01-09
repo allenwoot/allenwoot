@@ -16,24 +16,23 @@ class ApplicationController < ActionController::Base
     @source = 'https://github.com/allenwoot/proxy-ws'
   end
 
-  def json_to_ruby_hash
-    text_area_value = params[:text_area_value]
+  def to_json
+    input = params[:input]
     begin
-      hash = JSON.parse(text_area_value)
-      hash.symbolize_keys!
-      @magic = hash
+      hash = eval(input).to_json
     rescue
-      @error_text = 'Invalid string' if text_area_value.present?
+      raise "Syntax error"
     end
+    render :text => hash
   end
 
-  def ruby_hash_to_json
-    text_area_value = params[:text_area_value]
+  def to_ruby
+    input = params[:input]
     begin
-      hash = eval(text_area_value)
-      @magic = hash.to_json
+      hash = JSON.parse(input)
+      hash.symbolize_keys!
     rescue
-      @error_text = 'Invalid string' if text_area_value.present?
     end
+    render :text => hash
   end
 end

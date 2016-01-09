@@ -44,3 +44,13 @@ body {
   text-decoration: none;
   color: black;
 }
+
+.hash-converter-textarea {
+  width: 100%;
+  height: 200px;
+}
+
+.hash-converter-btn {
+  width: 150px;
+  height: 30px;
+}
