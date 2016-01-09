@@ -39,3 +39,4 @@ namespace :deploy do
   end
 end
 after "deploy:finished", "deploy:copy_assets"
+after "deploy:copy_assets", "puma:restart"
