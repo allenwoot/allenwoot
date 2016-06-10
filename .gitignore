@@ -16,8 +16,6 @@
 !/log/.keep
 /tmp
 
-config/database.yml
-config/application.yml
 vendor/*
 
 .DS_Store
