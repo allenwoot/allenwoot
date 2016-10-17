@@ -1,8 +1,3 @@
 == README
 
 This repository contains the source code for my personal website, allenwoot.com.
-
-The tech stack is
-rails
-postgres
-capistrano
