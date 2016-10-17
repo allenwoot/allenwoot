@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'det' => 'application#det'
   get 'proxy' => 'application#proxy'
   get 'tools' => 'application#tools'
+  get 'music' => 'application#music'
   get 'ruby-json-hash-converter' => 'application#ruby_json_hash_converter'
 
   post 'to_json' => 'application#to_json'

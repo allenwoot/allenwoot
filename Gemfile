@@ -17,8 +17,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'json'
 
@@ -31,15 +29,6 @@ gem 'puma'
 gem 'execjs'
 gem 'therubyracer'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 gem 'sprockets', '3.5.2'
 
 group :development, :test do
@@ -50,13 +39,6 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
-  # capistrano is for deploys
-  gem 'capistrano'
-  gem 'capistrano-puma'
-  gem 'capistrano-rails', require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano-rvm'
 end
 
 group :production do
@@ -64,3 +46,5 @@ group :production do
   # Postgresql
   gem 'pg', '0.17.0'
 end
+
+gem 'unicorn'
