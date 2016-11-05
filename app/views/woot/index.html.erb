@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Allen Wu</title>
+  <%= favicon_link_tag '/favicon.ico?' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-86914360-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+  <div class="homepage-container">
+    <div class="homepage-text">
+      <%= image_tag("headshot.png", :alt => "", :class => "headshot") %>
+      <p class="homepage-content">
+      Full stack growth engineer at <a href="https://www.airbnb.com/" class="no-style">Airbnb</a>, currently living in
+      <span class="strike">LA</span>
+      <span class="strike">Seattle</span>
+      <span class="strike">SF</span> Beijing.
+      I'm into
+      <span>travel</span>, 
+      <%= link_to("music", "music", :class => "no-style") %>, 
+      and the outdoors.
+      </p>
+      <ul class="more-info homepage-content">
+        <li><a href="https://github.com/allenwoot" class="more-info-link">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/allenwoot" class="more-info-link">Linkedin</a></li>
+        <li><a href="mailto:allen@allenwoot.com" class="more-info-link">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -54,3 +54,68 @@ body {
   width: 150px;
   height: 30px;
 }
+
+.homepage-container {
+  width: 40em;
+  height: 30em;
+  overflow: hidden;
+  margin: auto auto auto 10%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.homepage-text {
+  color: black;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  font-weight:100;
+  text-align: left;
+  line-height: 1.3em;
+}
+
+.homepage-content {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.headshot {
+  width: 15%;
+}
+
+.strike {
+  position: relative;
+  color: gray;
+}
+.strike::after {
+  border-bottom: 0.05em solid gray;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  font-size: 10px;
+}
+
+.more-info {
+  padding-left: 0 !important;
+  margin-top: -15px !important;
+}
+
+ul.more-info li {
+  display: inline;
+  font-weight: 100;
+  padding: 0 .5em 0 0;
+  font-size: 1.4em;
+  letter-spacing: .1;
+}
+
+.more-info-link {
+  font-size: 25px !important;
+}
+
+.no-style {
+  color: black;
+}
