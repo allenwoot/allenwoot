@@ -63,13 +63,19 @@ body {
 }
 
 .homepage-summary {
+  font-size: 40px;
 	color: black;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 40px;
 	font-weight: 100;
 	text-align: left;
 	line-height: 1.3em;
   margin: 25px 0;
+}
+
+@media (max-width: 500px) {
+  .homepage-summary {
+    font-size: 35px !important;
+  }
 }
 
 .homepage-links {
