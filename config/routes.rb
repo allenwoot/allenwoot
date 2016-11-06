@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'tools' => 'application#tools'
   get 'music' => 'application#music'
   get 'ruby-json-hash-converter' => 'application#ruby_json_hash_converter'
+  get 'travel' => 'woot#travel'
 
   post 'to_json' => 'application#to_json'
   post 'to_ruby' => 'application#to_ruby'

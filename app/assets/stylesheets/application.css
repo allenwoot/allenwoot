@@ -62,18 +62,21 @@ body {
   top: 0; bottom: 0; left: 0; right: 0;
 }
 
-.homepage-summary {
+.summary {
   font-size: 40px;
 	color: black;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 100;
-	text-align: left;
 	line-height: 1.3em;
+}
+
+.homepage-summary {
+	text-align: left;
   margin: 25px 0;
 }
 
 @media (max-width: 500px) {
-  .homepage-summary {
+  .summary {
     font-size: 35px !important;
   }
 }
