@@ -19,25 +19,28 @@
 </head>
 <body>
   <div class="homepage-container">
-    <div class="homepage-text">
-      <%= image_tag("headshot.png", :alt => "", :class => "headshot") %>
-      <p class="homepage-content">
+    <%= image_tag("headshot.png", :alt => "", :height => '90', :class => "headshot") %>
+    <div class="homepage-summary">
       Full stack growth engineer at <a href="https://www.airbnb.com/" class="no-style">Airbnb</a>, currently living in
       <span class="strike">LA</span>
       <span class="strike">Seattle</span>
       <span class="strike">SF</span> Beijing.
       I'm into
       <span>travel</span>, 
-      <%= link_to("music", "music", :class => "no-style") %>, 
+      <%= link_to("music", "music", :class => "no-style") %>
       and the outdoors.
-      </p>
-      <ul class="more-info homepage-content">
-        <li><a href="https://github.com/allenwoot" class="more-info-link">Github</a></li>
-        <li><a href="https://www.linkedin.com/in/allenwoot" class="more-info-link">Linkedin</a></li>
-        <li><a href="mailto:allen@allenwoot.com" class="more-info-link">Contact</a></li>
-      </ul>
     </div>
-
+    <div class="homepage-links">
+      <div class="homepage-link">
+        <a href="https://github.com/allenwoot">Github</a>
+      </div>
+      <div class="homepage-link">
+        <a href="https://www.linkedin.com/in/allenwoot">Linkedin</a>
+      </div>
+      <div class="homepage-link">
+        <a href="mailto:allen@allenwoot.com">Contact</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
