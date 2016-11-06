@@ -11,6 +11,5 @@ module Allenwoot
     config.serve_static_files = true
     config.assets.compile = true
     config.assets.enabled = true
-    config.assets.precompile += ['application.css', 'application.js']
   end
 end
