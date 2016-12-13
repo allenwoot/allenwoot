@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liz Legend</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="lizlegend-container">
+    <div class="lizlegend-pic">
+      <%= image_tag("liz.png", :width => '200') %>
+    </div>
+    <div class="lizlegend-content">
+      <%= image_tag("lizlin.gif", :width => '300') %>
+      <span class='liz-title'> LEGEND</span>
+    </div>
+  </div>
+</body>
+</html>

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'music' => 'woot#music'
   get 'travel' => 'woot#travel'
   get 'outdoors' => 'woot#outdoors'
+  get 'lizlegend' => 'lizlegend#home'
 
   post 'to_json' => 'application#to_json'
   post 'to_ruby' => 'application#to_ruby'
